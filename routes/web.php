@@ -30,6 +30,9 @@ Route::group(['prefix' => 'api'], function () {
         //Получение одного квиза с описанием
         Route::get('getQuiz', 'QuizController@getQuiz');
 
+        //Получение одного квиза с описанием
+        Route::get('get/{id}/quiz', 'QuizController@getQuizById');
+
         //Получение списка квизов
         Route::get('getQuizList', 'QuizController@getQuizList');
 
