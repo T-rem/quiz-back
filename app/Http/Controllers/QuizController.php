@@ -10,22 +10,6 @@ use Illuminate\Http\Request;
 
 class QuizController extends Controller
 {
-    public function startQuiz($id) {
-        //вернуть json без овтетов
-        $res = [];
-        $quiz_name = Quiz::where('id', $id)->first()->name;
-        $res['name'] = $quiz_name;
-
-        $questions = Question::where('quiz_id', $id)->get();
-        foreach ($questions as $k => $v) {
-            $res += [$k => ['name'=>$v['name']]];
-            $answers = Answers::where('question_id', $v['id'])->get();
-            foreach ($answers as $ki => $vi) {
-                $res[$k] += [$ki => $vi['name']];
-            }
-        }
-        return $res;
-    }
 
     public function getActiveQuizList() {
         $res = [];
@@ -56,24 +40,6 @@ class QuizController extends Controller
         return $res;
     }
 
-    public function getQuiz() {
-        //вернуть json с ответами
-
-        $res = [];
-        $quiz_name = \request('name');
-        $quiz = Quiz::where('name', $quiz_name)->first();
-        $res['name'] = $quiz_name;
-
-        $questions = Question::where('quiz_id', $quiz->id)->get();
-        foreach ($questions as $k => $v) {
-            $res += [$k => ['name'=>$v['name']]];
-            $answers = Answers::where('question_id', $v['id'])->get();
-            foreach ($answers as $ki => $vi) {
-                $res[$k] += [$ki => ['answer' => $vi['name'], "isCorrect" => $vi['is_correct'] == 1]];
-            }
-        }
-        return $res;
-    }
 
     public function postQuiz() {
         $user = \request('author');
@@ -109,8 +75,14 @@ class QuizController extends Controller
     }
 
 
-    public function getQuizList() {
-        $data = json_decode(file_get_contents('php://input'), true);
+    public function getAuthorQuizList($id) {
+        $res = [];
+        $users_quizzes = Quiz::where('user_id', $id)->get();
+
+        foreach ($users_quizzes as $k => $v){
+            $res[] = [$k => ['id' => $v->id, 'name' =>$v->name, 'author' => $v->user_id, "date" => $v->created_at]];
+        }
+
     }
 
     public function closeQuiz() {
