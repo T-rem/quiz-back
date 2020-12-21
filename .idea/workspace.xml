@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a0805a3-79c4-4073-ba94-bb2ba9b562fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +161,7 @@
       <updated>1608517711134</updated>
       <workItem from="1608517712203" duration="1762000" />
       <workItem from="1608519490601" duration="1796000" />
-      <workItem from="1608521318492" duration="1017000" />
+      <workItem from="1608521318492" duration="1296000" />
     </task>
     <servers />
   </component>
@@ -178,6 +177,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608521156295" />
+    <state x="2419" y="88" width="912" height="911" key="CommitChangelistDialog2" timestamp="1608522340826">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2419" y="88" width="912" height="911" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608522340826" />
     <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1608517841821">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
