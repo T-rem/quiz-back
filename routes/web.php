@@ -27,10 +27,7 @@ Route::group(['prefix' => 'api'], function () {
         //Завершение квиза от ученика
         Route::post('finish', 'QuizController@finishQuiz');
 
-        //Получение одного квиза с описанием
-        Route::get('getQuiz', 'QuizController@getQuiz');
-
-        //Получение одного квиза с описанием
+        //Получение одного квиза с описанием ++++++++++++++++++++++++
         Route::get('get/{id}/quiz', 'QuizController@getQuizById');
 
         //Получение списка квизов
