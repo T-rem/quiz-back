@@ -10,14 +10,13 @@ use Illuminate\Http\Request;
 
 class QuizController extends Controller
 {
-    public function startQuiz() {
+    public function startQuiz($id) {
         //вернуть json без овтетов
         $res = [];
-        $quiz_name = \request('name');
-        $quiz = Quiz::where('name', $quiz_name)->first();
+        $quiz_name = Quiz::where('id', $id)->first()->name;
         $res['name'] = $quiz_name;
 
-        $questions = Question::where('quiz_id', $quiz->id)->get();
+        $questions = Question::where('quiz_id', $id)->get();
         foreach ($questions as $k => $v) {
             $res += [$k => ['name'=>$v['name']]];
             $answers = Answers::where('question_id', $v['id'])->get();
@@ -71,7 +70,6 @@ class QuizController extends Controller
         $user = \request('author');
         $quiz_name = \request('name');
         $questions = \request('questions');
-
         $user_id = User::where('name', $user)->first()->id;
         $quiz = Quiz::create([
             'user_id' => $user_id,
@@ -89,7 +87,6 @@ class QuizController extends Controller
             ]);
 
             $question_id = $quest->id;
-
             foreach ($question['variants'] as $variant) {
                 Answers::create([
                     'question_id' => $question_id,

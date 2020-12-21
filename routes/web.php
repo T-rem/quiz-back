@@ -22,7 +22,7 @@ Route::group(['prefix' => 'api'], function () {
         Route::post('auth', 'AuthController@auth');
 
         //Старт квиза для ученика
-        Route::get('start', 'QuizController@startQuiz');
+        Route::get('start/{id}', 'QuizController@startQuiz');
 
         //Завершение квиза от ученика
         Route::post('finish', 'QuizController@finishQuiz');
