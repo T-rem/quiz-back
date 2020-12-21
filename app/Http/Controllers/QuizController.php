@@ -46,10 +46,10 @@ class QuizController extends Controller
         $res['quiz'] = ['user_id' => $quiz->user_id, 'name'=>$quiz->name, 'is_active' => $quiz->is_active, "date" => $quiz->created_at, "questions" => []];
 
         foreach ($questions as $key => $value) {
-            $res['quiz']['questions'] += [$key => ["name" => $value->name, "variants" => []]];
+            $res['quiz']['questions'] += [$key => ["id" => $value->id, "name" => $value->name, "variants" => []]];
             $answers =  Answers::where('question_id', $value->id)->get();
             foreach ($answers as $k => $v) {
-                $res['quiz']['questions'][$key]['variants'][] = ["name" => $v->name, "is_correct" => $v->is_correct];
+                $res['quiz']['questions'][$key]['variants'][] = ["id" => $v->id ,"name" => $v->name, "is_correct" => $v->is_correct];
             }
         }
 
