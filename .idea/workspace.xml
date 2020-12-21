@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a0805a3-79c4-4073-ba94-bb2ba9b562fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuizController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_20_061857_create_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_21_061857_create_answers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_20_062009_create_quiz_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_19_062009_create_quiz_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +163,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608517711134</updated>
       <workItem from="1608517712203" duration="1762000" />
-      <workItem from="1608519490601" duration="1223000" />
+      <workItem from="1608519490601" duration="1796000" />
+      <workItem from="1608521318492" duration="127000" />
     </task>
     <servers />
   </component>
@@ -177,6 +176,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2557" y="342" width="635" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608518674704" />
+    <state x="2613" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608521156295">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2613" y="298" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608521156295" />
     <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1608517841821">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -193,5 +196,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="284" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608517841821" />
+    <state x="2582" y="259" width="585" height="568" key="NewPhpClassDialog" timestamp="1608521035281">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2582" y="259" width="585" height="568" key="NewPhpClassDialog/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608521035281" />
   </component>
 </project>

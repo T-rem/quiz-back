@@ -58,7 +58,6 @@ class QuizController extends Controller
         $questions = \request('questions');
 
         $user_id = User::where('name', $user)->first();
-        dd($user_id);
         $quiz = Quiz::create([
             'user_id' => $user_id,
             'name' => $quiz_name
