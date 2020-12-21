@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
 
         Quiz::create([
-            'user_id' => Str::random(10),
+            'user_id' => rand(0, 12),
             'name' => Str::random(10)
         ]);
 
