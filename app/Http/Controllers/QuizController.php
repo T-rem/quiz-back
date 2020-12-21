@@ -39,7 +39,7 @@ class QuizController extends Controller
         return $res;
     }
 
-    public function getQuizById(Request $id) {
+    public function getQuizById($id) {
         $res = [];
         $activeQuiz = Quiz::where('id', $id)->first();
 
