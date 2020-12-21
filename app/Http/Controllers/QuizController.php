@@ -39,9 +39,9 @@ class QuizController extends Controller
         return $res;
     }
 
-    public function getQuizById($id) {
+    public function getQuizById(Request $id) {
         $res = [];
-        $activeQuiz = Quiz::where('id', $id)->get();
+        $activeQuiz = Quiz::where('id', $id)->first();
 
         $res[] = ['id' => $activeQuiz->id, 'name' =>$activeQuiz->name, 'author' => $activeQuiz->user_id, "date" => $activeQuiz->created_at];
 
