@@ -27,13 +27,13 @@ Route::group(['prefix' => 'api'], function () {
         //Получение одного квиза с описанием ++++++++++++++++++++++++
         Route::get('get/{id}/quiz', 'QuizController@getQuizById');
 
-        //Получение списка квизов автора
+        //Получение списка квизов автора ++++
         Route::get('get/{id}/list', 'QuizController@getAuthorQuizList');
 
         //Получение списка открытых квизов  ++++++++++++++++++++++++
         Route::get('get/active', 'QuizController@getActiveQuizList');
 
-        //Завершение квиза от ученика
+        // ++++++
         Route::post('auth', 'QuizController@auth');
 
         //Создание квиза ++++++++++++++++++++++++

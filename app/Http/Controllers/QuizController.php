@@ -82,7 +82,7 @@ class QuizController extends Controller
         foreach ($users_quizzes as $k => $v){
             $res[] = [$k => ['id' => $v->id, 'name' =>$v->name, 'author' => $v->user_id, "date" => $v->created_at]];
         }
-
+        return $res;
     }
 
     public function closeQuiz() {
