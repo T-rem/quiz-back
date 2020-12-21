@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\User::factory(10)->create();
+
         for ($i=0; $i < 10; $i++) {
             Quiz::create([
                 'user_id' => rand(1, 10),
@@ -25,10 +26,10 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        for ($i=0; $i < 10; $i++) {
+        for ($i=1; $i < 11; $i++) {
             Question::create([
                 'name' => Str::random(10),
-                'quiz_id' => rand(1, 10)
+                'quiz_id' => $i
             ]);
         }
         for ($i=0; $i < 20; $i++) {
