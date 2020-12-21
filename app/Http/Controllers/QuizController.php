@@ -16,7 +16,7 @@ class QuizController extends Controller
         $activeQuizzes = Quiz::where('is_active', true)->get();
 
         foreach ($activeQuizzes as $k => $v){
-            $res[] = [$k => ['id' => $v->id, 'name' =>$v->name, 'author' => $v->user_id, "date" => $v->created_at]];
+            $res[] = ['id' => $v->id, 'name' =>$v->name, 'author' => $v->user_id, "date" => $v->created_at];
         }
 
         return $res;

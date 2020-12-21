@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Quiz;
 use App\Models\User;
 
 class AuthController extends Controller

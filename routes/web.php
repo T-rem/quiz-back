@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api'], function () {
     Route::group(['prefix' => 'v1'], function () {
+        // ++
         Route::post('auth', 'AuthController@auth');
 
         //Завершение квиза от ученика
@@ -33,8 +34,6 @@ Route::group(['prefix' => 'api'], function () {
         //Получение списка открытых квизов  ++++++++++++++++++++++++
         Route::get('get/active', 'QuizController@getActiveQuizList');
 
-        // ++++++
-        Route::post('auth', 'QuizController@auth');
 
         //Создание квиза ++++++++++++++++++++++++
         Route::post('postQuiz', 'QuizController@postQuiz');
