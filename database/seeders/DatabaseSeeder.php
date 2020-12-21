@@ -34,9 +34,9 @@ class DatabaseSeeder extends Seeder
         }
         for ($i=0; $i < 20; $i++) {
             Answers::create([
-                'question_id' => rand(0, 10),
+                'question_id' => rand(1, 10),
                 'name' => Str::random(10),
-                'is_correct' => rand(0, 1),
+                'is_correct' => rand(0, 1)
             ]);
         }
     }
