@@ -49,7 +49,7 @@ class QuizController extends Controller
             $res['quiz']['questions'] += [$key => ["name" => $value->name, "variants" => []]];
             $answers =  Answers::where('question_id', $value->id)->get();
             foreach ($answers as $k => $v) {
-                $res['quiz']['questions']['variants'] += [ $k => ["name" => $v->name, "is_correct" => $v->is_correct]];
+                $res['quiz']['questions']['variants'][] = [ $k => ["name" => $v->name, "is_correct" => $v->is_correct]];
             }
         }
 
