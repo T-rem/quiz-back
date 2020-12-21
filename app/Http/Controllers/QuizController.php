@@ -28,8 +28,15 @@ class QuizController extends Controller
         return $res;
     }
 
-    public function finishQuiz() {
+    public function getActiveQuizList() {
+        $res = [];
+        $activeQuizzes = Quiz::where('is_active', true)->get();
 
+        foreach ($activeQuizzes as $quiz){
+            $res[] = $quiz->id;
+        }
+
+        return $res;
     }
 
     public function getQuiz() {

@@ -33,6 +33,10 @@ Route::group(['prefix' => 'api'], function () {
         //Получение списка квизов
         Route::get('getQuizList', 'QuizController@getQuizList');
 
+        //Получение списка открытых квизов квизов
+        Route::get('get/active', 'QuizController@getActiveQuizList');
+
+
         //Создание квиза ++++++++++++++++++++++++
         Route::post('postQuiz', 'QuizController@postQuiz');
 

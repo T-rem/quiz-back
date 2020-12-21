@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
         for ($i=0; $i < 10; $i++) {
             Quiz::create([
                 'user_id' => rand(1, 10),
-                'name' => Str::random(10)
+                'name' => Str::random(10),
+                'is_active' => rand(0,1)
             ]);
         }
 
