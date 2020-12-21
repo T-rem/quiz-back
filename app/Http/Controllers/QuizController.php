@@ -69,14 +69,14 @@ class QuizController extends Controller
 
     public function postQuiz() {
         $user = \request('author');
-
         $quiz_name = \request('name');
         $questions = \request('questions');
 
         $user_id = User::where('name', $user)->first();
         $quiz = Quiz::create([
             'user_id' => $user_id,
-            'name' => $quiz_name
+            'name' => $quiz_name,
+            'is_active' => false
         ]);
 
         $quiz_id = $quiz->id;
